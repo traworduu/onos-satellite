@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "satellite-gui-lib": {
+      "root": "projects/satellite-gui-lib",
+      "sourceRoot": "projects/satellite-gui-lib/src",
+      "projectType": "library",
+      "prefix": "satellite-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/satellite-gui-lib/tsconfig.lib.json",
+            "project": "projects/satellite-gui-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/satellite-gui-lib/src/test.ts",
+            "tsConfig": "projects/satellite-gui-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/satellite-gui-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/satellite-gui-lib/tsconfig.lib.json",
+              "projects/satellite-gui-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "satellite-gui-lib"
+}

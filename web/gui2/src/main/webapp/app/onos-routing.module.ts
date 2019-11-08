@@ -18,6 +18,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { Gui2TopoLibModule } from 'gui2-topo-lib';
 import { FmGui2LibModule } from 'fm-gui2-lib';
 import { RoadmGuiLibModule } from 'roadm-gui-lib';
+import { SatelliteGuiLibModule } from 'satellite-gui-lib';
 
 /**
  * The set of Routes in the application - can be chosen from nav menu or
@@ -93,10 +94,12 @@ const onosRoutes: Routes = [
         path: 'roadm-gui',
         loadChildren: 'roadm-gui-lib#RoadmGuiLibModule'
     },
+
     {
-        path: 'heroes',
-        loadChildren: 'roadm-gui-lib#heroes#HeroesComponent'
+        path: 'satellite-gui',
+        loadChildren: 'satellite-gui-lib#SatelliteGuiLibModule'
     },
+
     {
         path: '',
         redirectTo: 'topo2', // Default to Topology view

@@ -127,6 +127,7 @@ genrule(
         ":_root_level_files",
         ":_web_app_all",
         "//apps/roadm/web/roadm-gui:roadm-gui-lib-build",
+        "//apps/satellite/web/satellite-gui:satellite-gui-lib-build",
     ],
     outs = [
         "onos-gui2-ng-build-prod.log",
@@ -153,6 +154,11 @@ genrule(
           " ROADM_GUI_LIB_FILES=($(locations //apps/roadm/web/roadm-gui:roadm-gui-lib-build)) &&" +  # An array of filenames - sorted by time created
           " tar xf $$ROOT/$${ROADM_GUI_LIB_FILES[0]} &&" +
           " mv package/ node_modules/roadm-gui-lib/ &&" +
+
+          " SATELLITE_GUI_LIB_FILES=($(locations //apps/satellite/web/satellite-gui:satellite-gui-lib-build)) &&" +  # An array of filenames - sorted by time created
+          " tar xf $$ROOT/$${SATELLITE_GUI_LIB_FILES[0]} &&" +
+          " mv package/ node_modules/satellite-gui-lib/ &&" +
+
           # End of add in modules from external packages
           " mkdir -p src/main/webapp/app/fw &&" +
           " (cd src/main/webapp/app/fw &&" +

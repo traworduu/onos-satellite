@@ -173,6 +173,7 @@ ONOS_APPS = [
     "//apps/linkprops:onos-apps-linkprops-oar",
     "//apps/reactive-routing:onos-apps-reactive-routing-oar",
     "//apps/roadm:onos-apps-roadm-oar",
+    "//apps/satellite:onos-apps-satellite-oar",
     "//apps/sdnip:onos-apps-sdnip-oar",
     "//apps/test/cluster-ha:onos-apps-test-cluster-ha-oar",
     "//apps/test/demo:onos-apps-test-demo-oar",
