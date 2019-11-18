@@ -20,7 +20,8 @@
               {"glob": "**/*",
                "input":"src/main/webapp/cesium/Build/Cesium",
                "output":"src/main/webapp/assets/cesium"},
-              "src/main/webapp/data"
+              "src/main/webapp/data",
+              "src/main/webapp/leo.png"
        
             ],
             "styles": ["src/main/webapp/onos.global.css",
